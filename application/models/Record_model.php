@@ -8,7 +8,7 @@ class Record_model extends CI_Model {
     public function __construct() {
         $this->client = new Client([
             // TODO: Tambahkan Base URL API
-            'base_uri' => "base_url_backend_Anda",
+            'base_uri' => "https://backend-dot-submission-mgce-riandycandra.et.r.appspot.com/",
         ]);
     }
 
@@ -55,7 +55,7 @@ class Record_model extends CI_Model {
             $amount = $amount * -1;
         }
 
-        $files;
+        $files = null;
         if ($_FILES['attachment']['tmp_name'] !== "") {
             $files = fopen($_FILES['attachment']['tmp_name'], 'r');
         }
@@ -97,7 +97,7 @@ class Record_model extends CI_Model {
             $amount = $amount * -1;
         }
 
-        $files;
+        $files = null;
         if ($_FILES['attachment']['tmp_name'] !== "") {
             $files = fopen($_FILES['attachment']['tmp_name'], 'r');
         }
